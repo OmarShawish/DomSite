@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dom-Cite</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <style>
+        img {
+            border: 5px solid rgb(0, 0, 0);
+        }
+
+        style {
+            border:5px solid rgb(0, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:rgb(233, 233, 233);">This is Dom</h1>
+    <p style="color:rgb(255, 255, 255);">Best Friends with Omar</p>
+    <img id="dom1" src="DominicFrugoliOldPhoto.jpg" alt="Dom1" width="208" height="284" onclick="toggleAudio('audio1')">
+    <img id="dom2" src="IMG_2713.JPG" alt="Dom2" width="208" height="284" onclick="toggleAudio('audio2')">
+    <img id="dom3" src="IMG_5261.PNG" alt="Dom3" width="208" height="284" onclick="toggleAudio('audio3')">
+    <img id="dom4" src="image000000.jpg" alt="Dom4" width="208" height="284" onclick="toggleAudio('audio4')">
+    <img id="dom5" src="Screen Shot 2023-05-02 at 10.06.35 PM.png" alt="Dom5" width="208" height="284" onclick="toggleAudio('audio5')">
+    <img id="dom6" src="theman.png" alt="Dom6" width="208" height="284" onclick="toggleAudio('audio6')">
+    <img id="dom7" src="cute dom.jpg" alt="Dom7" width="208" height="284" onclick="toggleAudio('audio7')">
+
+    <audio id="audio1">
+        <source src="lore.wav" type="audio/wav">
+    </audio>
+    <audio id="audio2">
+        <source src="Simlish dom [2023-05-02 224725].wav" type="audio/wav">
+    </audio>
+    <audio id="audio3">
+        <source src="what u gonna do_ [2023-05-02 224614].wav" type="audio/wav">
+    </audio>
+    <audio id="audio4">
+        <source src="checkmeout [2023-05-02 224505].wav" type="audio/wav">
+    </audio>
+    <audio id="audio5">
+        <source src="Mean dom [2023-05-02 224101].wav" type="audio/wav">
+    </audio>
+    <audio id="audio6">
+        <source src="Hours [2023-05-02 224534].wav" type="audio/wav">
+    </audio>
+    <audio id="audio7">
+        <source src="italian dom.wav" type="audio/wav">
+    </audio>
+
+
+    <script>
+        // Get the image elements by their IDs
+        var img1 = document.getElementById("dom1");
+        var img2 = document.getElementById("dom2");
+        var img3 = document.getElementById("dom3");
+        var img4 = document.getElementById("dom4");
+        var img5 = document.getElementById("dom5");
+        var img6 = document.getElementById("dom6");
+        var img7 = document.getElementById("dom7");
+
+        // Set the position of the images
+        img2.style.position = "relative";
+        img2.style.left = "100px";
+        img2.style.top = "100px";
+
+        img3.style.position = "relative";
+        img3.style.left = "270px";
+        img3.style.top = "200px";
+
+        img4.style.position = "relative";
+        img4.style.left = "450px";
+        img4.style.top = "300px";
+
+        img5.style.position = "relative";
+        img5.style.left = "550px";
+        img5.style.top = "400px";
+
+        img6.style.position = "relative";
+        img6.style.left = "-1110px";
+        img6.style.top = "400px";
+
+        img7.style.position = "relative";
+        img7.style.left = "100px";
+        img7.style.top = "0px";
+    </script>
+
+    <script>
+        function toggleAudio(audioId) {
+            var audio = document.getElementById(audioId);
+            if (audio.paused) {
+                audio.currentTime = 0;
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+ 
+    <script>
+		function setup() {
+        createCanvas(windowWidth, windowHeight);
+        background(0);
+        strokeWeight(1);
+        colorMode(HSB, 360, 100, 100, 1);
+        noFill();
+
+        // Set the canvas element to cover the entire window
+        var canvas = document.querySelector('canvas');
+        canvas.style.position = 'fixed';
+        canvas.style.top = 0;
+        canvas.style.left = 0;
+        canvas.style.zIndex = -1;
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+}
+
+		function draw() {
+			stroke(random(0, 360), 100, 100, 0.7);
+			line(random(0, width), random(0, height), random(0, width), random(0, height));
+		}
+        
+        function mousePressed() {
+            clear();
+            background(0);
+            draw();
+        }
+	</script>
+
+</body>
+</html>
